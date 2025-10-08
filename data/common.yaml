@@ -4,48 +4,49 @@ solr::allow_paths: []
 solr::cloud: false
 solr::custom_plugins: []
 solr::custom_plugins_dir: "%{lookup('solr::var_dir')}/libs"
-solr::custom_plugins_id: 'solr.custom_plugins.dir'
+solr::custom_plugins_id: "solr.custom_plugins.dir"
 solr::enable_prometheus_exporter: false
 solr::enable_remote_jmx: false
 solr::enable_security_manager: true
 solr::enable_syslog: false
-solr::extract_dir: '/opt'
+solr::extract_dir: "/opt"
 solr::gc_log_opts:
-  - '-verbose:gc'
-  - '-Xlog:gc'
+  - "-verbose:gc"
+  - "-Xlog:gc"
 solr::gc_tune: []
 solr::java_home: ~
-solr::java_mem: '-Xms512m -Xmx512m'
+solr::java_mem: "-Xms512m -Xmx512m"
 solr::jetty_host: ~
 solr::limit_file_max: 65000
 solr::limit_proc_max: 65000
-solr::log_dir: '/var/log/solr'
+solr::log_dir: "/var/log/solr"
 solr::manage_additional_packages: true
 solr::manage_allow_paths: false
 solr::manage_custom_plugins: false
 solr::manage_service_limits: true
-solr::mirror: 'https://dlcdn.apache.org/solr/solr'
+solr::mirror: "https://dlcdn.apache.org/solr/solr"
 solr::prometheus_exporter_env_vars: {}
 solr::prometheus_exporter_extra_options: ~
 solr::prometheus_exporter_user: "%{lookup('solr::solr_user')}"
-solr::prometheus_exporter_service_name: 'solr-exporter'
-solr::service_name: 'solr'
+solr::prometheus_exporter_service_name: "solr-exporter"
+solr::service_name: "solr"
 solr::solr_base: "%{lookup('solr::extract_dir')}/%{lookup('solr::service_name')}"
 solr::solr_home: "%{lookup('solr::var_dir')}/data"
 solr::solr_host: "%{facts.networking.fqdn}"
 solr::solr_opts: []
 solr::solr_port: 8983
-solr::solr_time: 'UTC'
-solr::solr_user: 'solr'
-solr::syslog_host: 'localhost'
+solr::solr_time: "UTC"
+solr::solr_user: "solr"
+solr::syslog_host: "localhost"
 solr::syslog_port: 514
-solr::syslog_protocol: 'UDP'
-solr::syslog_app_name: 'solr'
-solr::syslog_facility: 'LOCAL0'
-solr::staging_dir: '/opt/staging'
+solr::syslog_protocol: "UDP"
+solr::syslog_app_name: "solr"
+solr::syslog_facility: "LOCAL0"
+solr::staging_dir: "/opt/staging"
 solr::upgrade: false
-solr::var_dir: '/var/solr'
+solr::var_dir: "/var/solr"
 solr::version: ~
 solr::zk_chroot: ~
+solr::zk_create_chroot: true
 solr::zk_ensemble: ~
 solr::zk_timeout: 15000
